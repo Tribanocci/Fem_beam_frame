@@ -16,7 +16,7 @@ This MATLAB script enables the calculation of the beams stress and displacements
 
 The following frame is going to be analyzed and for each beam the stresses and displacments will be calculated
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.002.jpeg "Καταγραφή")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.002.jpeg "Καταγραφή")
 
 ### Case details
 
@@ -25,13 +25,13 @@ In the above frame we have 8 beams with different directions in the plane. In ad
 ### Mathematical formulas
 For each beam we have 3 degrees of freedom at each node, so 6 degrees of freedom in total. Therefore the local stiffness matrix k, has dimensions 6x6 with the following form:
 
-![C:\Users\user\AppData\Local\Microsoft\Windows\INetCache\Content.Word\ματ.jpg](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.003.jpeg)
+![C:\Users\user\AppData\Local\Microsoft\Windows\INetCache\Content.Word\ματ.jpg](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.003.jpeg)
 
 But due to the random direction of each beam, as in lattices, we transform k, so that the projections of the axial and shear forces on the beam enter the global stiffness matrix. Therefore displacements are calculated in global coordinates.
 
 Distributed and concentrated forces are entered according to global coordinates. Furthermore, the distributed forces are transformed into epicondials through the integral.
 
-![C:\Users\kfyti\Downloads\A3\Pic1.png](doc\Pic1.png)
+![C:\Users\kfyti\Downloads\A3\Pic1.png](doc/Pic1.png)
 
 Although in the elements between nodes (4,5) and (5,6), they receive a distributed force not perpendicular to the neutral axis of the beam, no further transformation is needed. The reason this happens is because the distributed forces are transformed into epinodal forces in the global system and so we can proceed with the solution for the displacements of the frame, which are done in the global coordinate system.
 
@@ -39,7 +39,7 @@ The loading due to the same weight is included with the corresponding epicondicu
 
 *The above calculations are done with the following piece of code:*
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.004.jpeg)
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.004.jpeg)
 
 ### Beam data
 
@@ -47,9 +47,9 @@ The beam used for the frame is an i-beam, corresponding to the identification IP
 
 
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.005.jpeg "ibeam")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.005.jpeg "ibeam")
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.006.jpeg "ipe200")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.006.jpeg "ipe200")
 
 From these data we keep the area, the moment of inertia about the strong axis (for bending) and the density.
 
@@ -71,13 +71,13 @@ f=k\*T\*Dglobal-Τ\*Fdist
 
 *The above calculations are done with the following piece of code:*
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.007.jpeg "Φ")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.007.jpeg "Φ")
 
 ### Result calculation
 
 The shear force and bending moment diagrams were obtained from finite element theory for the beam, where from the cubic shape function N and from the relations
 
-![C:\Users\kfyti\Downloads\A3\Pic1.png](doc\pic11.png)
+![C:\Users\kfyti\Downloads\A3\Pic1.png](doc/pic11.png)
 
 The axial force diagrams were obtained from the local forces of each element in the x direction. In the beams where we have no distributed force in the x-axis, the construction of the diagram is simple, since we have constant axial stress within the beam. But for the two beams at the top of the frame, the distributed force has an x-axis component as well. Therefore, the diagram of the axial forces has a linear form and the values ​​of the local forces in the x direction, give the two extreme values.
 
@@ -85,7 +85,7 @@ The axial force diagrams were obtained from the local forces of each element in 
 
 *The above calculations are done with the following piece of code:*
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.008.jpeg "πλ")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.008.jpeg "πλ")
 
 Summarizing, the code [*beam\_frame.m*] having as input the coordinates of the nodes, the epinodal and distributed forces on each edge (beam) and the characteristics of the cross section, gives the displacements of the nodes, the local forces on each node and the NQM diagrams for each beam.
 
@@ -99,7 +99,7 @@ Summarizing, the code [*beam\_frame.m*] having as input the coordinates of the n
 
 1<sup>η</sup> Δοκός
 
-![C:\Users\user\AppData\Local\Microsoft\Windows\INetCache\Content.Word\1a.jpg](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.009.jpeg)
+![C:\Users\user\AppData\Local\Microsoft\Windows\INetCache\Content.Word\1a.jpg](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.009.jpeg)
 
 
 
@@ -108,7 +108,7 @@ Summarizing, the code [*beam\_frame.m*] having as input the coordinates of the n
 
 2<sup>η</sup> Δοκός
 
-![C:\Users\user\Desktop\2a.JPG](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.010.jpeg)
+![C:\Users\user\Desktop\2a.JPG](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.010.jpeg)
 
 
 
@@ -121,24 +121,24 @@ Summarizing, the code [*beam\_frame.m*] having as input the coordinates of the n
 
 
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.011.jpeg "3a")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.011.jpeg "3a")
 
 
 4<sup>η</sup> Δοκός
 
 
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.012.jpeg "4a")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.012.jpeg "4a")
 
 5<sup>η</sup> Δοκός
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.013.jpeg "5a")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.013.jpeg "5a")
 
 
 
 6<sup>η</sup> Δοκός
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.014.jpeg "6a")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.014.jpeg "6a")
 
 
 
@@ -146,14 +146,14 @@ Summarizing, the code [*beam\_frame.m*] having as input the coordinates of the n
 
 7<sup>η</sup> Δοκός
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.015.jpeg "7a")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.015.jpeg "7a")
 
 
 
 
 8<sup>η</sup> Δοκός
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.016.jpeg "8a")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.016.jpeg "8a")
 
 
 
@@ -161,52 +161,52 @@ Summarizing, the code [*beam\_frame.m*] having as input the coordinates of the n
 
 1<sup>η</sup> Δοκός
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.017.jpeg "1b")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.017.jpeg "1b")
 
 
 
 2η Δοκός
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.018.jpeg "2b")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.018.jpeg "2b")
 
 
 
 3<sup>η</sup> Δοκός
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.019.jpeg "3b")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.019.jpeg "3b")
 
 
 
 4<sup>η</sup> Δοκός
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.020.jpeg "4b")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.020.jpeg "4b")
 
 
 
 
 5<sup>η</sup> Δοκός
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.021.jpeg "5b")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.021.jpeg "5b")
 
 
 
 
 6<sup>η</sup> Δοκός
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.022.jpeg "6b")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.022.jpeg "6b")
 
 
 
 
 7<sup>η</sup> Δοκός
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.023.jpeg "7b")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.023.jpeg "7b")
 
 
 
 8<sup>η</sup> Δοκός
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.024.jpeg "8b")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.024.jpeg "8b")
 
 
 
