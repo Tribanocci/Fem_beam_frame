@@ -16,7 +16,7 @@ This MATLAB script enables the calculation of the beams stress and displacements
 
 The following frame is going to be analyzed and for each beam the stresses and displacments will be calculated
 
-![](doc\Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.002.jpeg "Καταγραφή")
+![](doc/Aspose.Words.53f010bd-91cb-4803-ad61-28c168fb6218.002.jpeg "Καταγραφή")
 
 ### Case details
 
